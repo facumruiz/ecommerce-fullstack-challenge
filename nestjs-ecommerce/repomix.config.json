@@ -1,0 +1,36 @@
+{
+  "include": [
+    "src/main.ts",
+    "src/app.module.ts",
+
+    "src/api/api.module.ts",
+    "src/api/auth/**/*",
+    "src/api/user/**/*",
+    "src/api/product/**/*",
+    "src/api/role/**/*",
+
+    "src/database/entities/**/*",
+    "src/database/typeorm/**/*",
+    "src/database/seed/**/*",
+
+    "src/common/helper/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "test",
+    "**/*.spec.ts",
+    ".git",
+    ".github",
+    "coverage",
+
+    "nest",
+    "npm",
+    "rimraf",
+    "nestjs-ecommerce@0.0.1"
+  ],
+  "output": {
+    "file": "repomix-output.txt",
+    "format": "text"
+  }
+}

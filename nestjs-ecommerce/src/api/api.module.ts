@@ -6,18 +6,14 @@ import { UserModule } from './user/user.module';
 import { RoleModule } from './role/role.module';
 import { ProductModule } from './product/product.module';
 import { ErrorsFilter } from 'src/errors/errors.filter';
+import { InventoryModule } from './inventory/inventory.module';
+import { OrderModule } from './order/order.module';
 
 @Module({
-  imports: [AuthModule, UserModule, RoleModule, ProductModule],
+  imports: [AuthModule, UserModule, RoleModule, ProductModule, InventoryModule, OrderModule],
   providers: [
-    {
-      provide: APP_INTERCEPTOR,
-      useClass: SucessResponseInterceptor,
-    },
-    {
-      provide: APP_FILTER,
-      useClass: ErrorsFilter,
-    },
+    { provide: APP_INTERCEPTOR, useClass: SucessResponseInterceptor },
+    { provide: APP_FILTER, useClass: ErrorsFilter },
   ],
 })
 export class ApiModule {}

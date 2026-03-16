@@ -1,0 +1,218 @@
+/* ------------------------------
+   BODY AND CONTAINER
+--------------------------------*/
+body, html {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  background: #121212;
+  color: #f3f4f6;
+}
+
+body {
+  display: flex;
+  justify-content: center;  /* center horizontally */
+  align-items: center;      /* center vertically */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Main container */
+.container {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ------------------------------
+   TITLE
+--------------------------------*/
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* ------------------------------
+   LOGIN + CREATE ORDER GRID
+--------------------------------*/
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* ------------------------------
+   CARDS
+--------------------------------*/
+.card {
+  background: #1e1e1e;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Extra margin for Inventory and Events */
+.card.inventory,
+.card.events {
+  margin-top: 20px;
+}
+
+/* ------------------------------
+   FORMS
+--------------------------------*/
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+input, select {
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #333;
+  background: #2c2c2c;
+  color: #f3f4f6;
+  font-size: 14px;
+  flex: 1 1 80px;
+  min-width: 60px;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+}
+
+/* ------------------------------
+   BUTTONS
+--------------------------------*/
+button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  background: #3b82f6;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 14px;
+}
+
+button:hover:not(:disabled) {
+  background: #2563eb;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+button:disabled {
+  background: #6b7280;
+  cursor: not-allowed;
+}
+
+/* ------------------------------
+   TABLES
+--------------------------------*/
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  color: #f3f4f6;
+}
+
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid #333;
+  text-align: left;
+}
+
+.low-stock {
+  background: #3b1f1f;
+}
+
+.badge {
+  margin-left: 8px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.success {
+  background: #166534;
+  color: #dcfce7;
+}
+
+.danger {
+  background: #991b1b;
+  color: #fee2e2;
+}
+
+/* ------------------------------
+   ALERTS
+--------------------------------*/
+.alert {
+  background: #78350f;
+  color: #fde68a;
+  font-weight: 500;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.alert-error {
+  background: #991b1b;
+  color: #fee2e2;
+}
+
+.muted {
+  color: #9ca3af;
+  font-size: 14px;
+}
+
+/* ------------------------------
+   SSE EVENTS
+--------------------------------*/
+.event {
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  background: #1f1f1f;
+  font-family: monospace;
+  font-size: 13px;
+  color: #f3f4f6;
+}
+
+.event-ok {
+  border-left: 4px solid #16a34a;
+  background: #14532d;
+}
+
+.event-danger {
+  border-left: 4px solid #dc2626;
+  background: #581c1c;
+}
+
+.event-header {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+/* ------------------------------
+   RESPONSIVE
+--------------------------------*/
+@media (max-width: 600px) {
+  .form-row {
+    flex-direction: column;
+  }
+}
