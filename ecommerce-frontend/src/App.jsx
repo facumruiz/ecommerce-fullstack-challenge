@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import "./styles.css";
 
-const API = "http://localhost:3000";
+const API = 'https://ecommerce-fullstack-challenge.onrender.com';
 
 function App() {
   const [token, setToken] = useState(localStorage.getItem("token") || "");
