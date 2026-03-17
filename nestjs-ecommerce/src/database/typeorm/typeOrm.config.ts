@@ -27,6 +27,7 @@ export const dataSourceOptions: DataSourceOptions = {
   database: process.env.DATABASE_NAME,
   username: process.env.DATABASE_USER,
   password: process.env.DATABASE_PASSWORD,
+  ssl: process.env.DATABASE_SSL === 'true' ? { rejectUnauthorized: false } : false,
   entities: [
     User, Role, Product, Category, Inventory,
     ProductVariation, ProductVariationPrice,
